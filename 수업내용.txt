@@ -1,0 +1,31 @@
+import pico2d
+Pico2d is prepared.
+pico2d.open_canvas()
+pico2d.hide_lattice()	# 모눈 숨기기
+pico2d.show_lattice()
+pico2d.hide_lattice()
+pico2d.show_lattice()
+pico2d.close_canvas()
+pico2d.open_canvas(1280,720)	#크기 지정
+pico2d.close_canvas()
+pico2d.open_canvas()
+
+img = pico2d.load_image("character.png")
+cannot load character.png => 이미지가 어디있는지 알 수 없음 => 에러
+
+모든 소프트웨어는 액세스할 수 있는 폴더를 갖고있음(working folder)
+
+import os
+os.getcwd()	#cwd(current working directory)
+'C:\\Python'	#폴더 확인
+
+os.listdir()	# 폴더 안 확인
+['DLLs', 'Doc', 'include', 'Lib', 'libs', 'LICENSE.txt', 'NEWS.txt', 'python.exe', 'python3.dll', 'python310.dll', 'pythonw.exe', 'Scripts', 'tcl', 'Tools', 'vcruntime140.dll', 'vcruntime140_1.dll']
+
+
+os.chdir('d:/06')	#working folder를 06이라는 폴더로 바꿔줌 
+os.listdir()
+['.gitattributes', '.gitignore', '06', 'character.png', 'character_grass.py', 'grass.png', '수업내용.txt']
+
+img = pico2d.load_image('character.png')	#이미지 로드하기
+img.draw_now(400,300)			#이미지 그리기
