@@ -27,5 +27,15 @@ os.chdir('d:/06')	#working folder를 06이라는 폴더로 바꿔줌
 os.listdir()
 ['.gitattributes', '.gitignore', '06', 'character.png', 'character_grass.py', 'grass.png', '수업내용.txt']
 
-img = pico2d.load_image('character.png')	#이미지 로드하기
+img = pico2d.load_image('character.png')	#이미지 로드하기(캔버스가 열려있어야함.)
 img.draw_now(400,300)			#이미지 그리기
+
+for x in range(0,9):
+    for y in range(0,7):
+        img.draw_now(x*100,y*100)		#떼로 그리기
+
+pico2d.clear_canvas_now()			#지우기
+
+from pico2d import *		#항상 모듈이름.함수()를 하지 않아도 됨. pico2d.open_canvas()
+								  ->open_canvas()
+
